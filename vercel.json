@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "functions": {
+    "api/**/*.py": {
+      "runtime": "python3.11",
+      "maxDuration": 15,
+      "memory": 256
+    }
+  },
+  "routes": [
+    { "src": "/", "dest": "/api/AIFD.py" },
+    { "src": "/(.*)", "dest": "/api/AIFD.py" }
+  ],
+  "regions": ["bom1"]
+}
